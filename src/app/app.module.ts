@@ -1,23 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AboutComponent } from './components/about/about.component';
+import { appRouterProviders } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PerfilComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    FormsModule
+
   ],
-  providers: [],
+  providers: [appRouterProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
